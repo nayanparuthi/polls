@@ -19,8 +19,8 @@ def index():
 		pollsCountPublic = pyBot.getPublicPolls('username')
 		return render_template('index.html', pollsCountPrivate=pollsCountPrivate, pollsCountPublic=pollsCountPublic)
 	else:
-		pollsCount = pyBot.getPublicPolls('username')
-		return render_template('index.html', pollsCount=pollsCount)
+		pollsCountPublic= pyBot.getPublicPolls('username')
+		return render_template('index.html', pollsCountPublic=pollsCountPublic)
 
 @app.route('/login')
 def log_in():
@@ -111,4 +111,4 @@ def vote():
 		return render_template("voted.html")
 
 if __name__ == '__main__':
-	app.run(debug=True)
+	app.run()
