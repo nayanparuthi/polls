@@ -5,8 +5,8 @@ import os
 class Database(object):
     def __init__(self):
         self.host = os.environ['DB_URL']
-        self.usrnme = "root"
-        self.pswrd = ""  
+        self.usrnme = os.environ['DB_USER']
+        self.pswrd = os.environ['DB_PASS']
         self.dbnme = "polls"
         self.connection = pymysql.connect(host=self.host,
                              user=self.usrnme,
