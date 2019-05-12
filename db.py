@@ -3,7 +3,7 @@ import genpass
 
 class Database(object):
     def __init__(self):
-        self.host = "localhost"
+        self.host = ENV['DB_URL']
         self.usrnme = "root"
         self.pswrd = ""  
         self.dbnme = "polls"
