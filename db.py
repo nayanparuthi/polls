@@ -7,7 +7,7 @@ class Database(object):
         self.host = os.environ['DB_URL']
         self.usrnme = os.environ['DB_USER']
         self.pswrd = os.environ['DB_PASS']
-        self.dbnme = "polls"
+        self.dbnme = os.environ['DB_NAME']
         self.connection = pymysql.connect(host=self.host,
                              user=self.usrnme,
                              password=self.pswrd,
