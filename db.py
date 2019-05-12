@@ -1,5 +1,6 @@
 import pymysql.cursors
 import genpass
+import os
 
 class Database(object):
     def __init__(self):
